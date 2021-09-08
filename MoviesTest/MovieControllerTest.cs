@@ -26,8 +26,8 @@ namespace web_api_tests
         [Fact]
         public void Get()
         {            
-            var okResult = _controller.Get(1);
-            Assert.IsType<OkObjectResult>(okResult);
+            var okResult = _controller.Get(1);          
+            Assert.NotNull(okResult);
         }
 
         [Fact]
