@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Movie.API.Controllers
 {
     [ApiController]
-    [Route("api/[Movies]")]
+    [Route("api/[Controller]")]
     public class MoviesController : ControllerBase
     {
         private readonly ILogger _logger;
