@@ -36,12 +36,6 @@ namespace web_api_tests
             return _movie.Where(a => a.Id == id)
                 .FirstOrDefault();
         }
-
-        public void Remove(int id)
-        {
-            var existing = _movie.First(a => a.Id == id);
-            _movie.Remove(existing);
-        }
         
     }
 }

@@ -20,9 +20,6 @@ namespace Movie.API.Controllers
             _movie = movie;
         }
 
-        public MoviesController()
-        { }
-
         // GET api/movies/1
         [HttpGet("{id}")]       
         public IActionResult Get(int? Id)
@@ -50,6 +47,7 @@ namespace Movie.API.Controllers
         {            
             if (!ModelState.IsValid)
             {
+                _logger.LogInformation("Model data thrown expection");
                 return BadRequest(ModelState);
             }
             var item = _movie.AddMovie(movieObj);            
